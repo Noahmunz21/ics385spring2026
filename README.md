@@ -6,6 +6,6 @@ This is the main page for Course ICS 385 Spring 2026.
 
 **Week 2 - HTML and CSS.**
 
-• HW2: Bio Page - bio.html, styles.css
+• HW2: Bio Page - bio.html, style.css
 
 **Week 3 - JavaScript.**
