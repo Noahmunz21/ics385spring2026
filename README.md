@@ -8,4 +8,4 @@ This is the main page for Course ICS 385 Spring 2026.
 
 • HW2: Bio Page - [bio.html](https://github.com/Noahmunz21/ics385spring2026/files/week2/hw2/bio.html), [styles.css](https://github.com/Noahmunz21/ics385spring2026/files/week2/hw2/styles.css)
 
-**Week 3 - JavaScript.
+**Week 3 - JavaScript.**
