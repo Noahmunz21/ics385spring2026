@@ -1,23 +1,36 @@
+/* styles.css
+   Beginner-friendly comments added to explain CSS syntax and what each rule does.
+   - A CSS rule has a selector (e.g., body, .btn) and a block of properties inside { }.
+   - Each property is a name: value; pair (e.g., color: #40514e;).
+   - Selectors:
+     - element selectors: body, h1, p (apply to those HTML tags)
+     - class selectors: .btn, .top-container (apply to elements with that class)
+     - id selectors: #idName (apply to an element with a specific id) - not used here
+*/
+
+/* The body selector sets base styles for the whole page */
 body {
-  color: #40514e;
-  margin: 0;
-  text-align: center;
-  font-family: "Merriweather", serif;
+  color: #40514e; /* text color for the page */
+  margin: 0; /* remove default browser margin */
+  text-align: center; /* center-align text by default */
+  font-family: "Merriweather", serif; /* fallback to serif if Merriweather isn't available */
 }
 
+/* Headings have their own colors and fonts.
+   Font-size values: 1rem = root font size; here large sizes are used for emphasis. */
 h1 {
   color: #66bfbf;
-  font-size: 5.625rem;
-  margin: 50px auto 0 auto;
-  font-family: "Sacramento", cursive;
+  font-size: 5.625rem; /* very large heading */
+  margin: 50px auto 0 auto; /* top margin 50px, horizontal auto centers block-level elements */
+  font-family: "Sacramento", cursive; /* a cursive font for a stylized look */
 }
 
 h2 {
   color: #66bfbf;
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
-  font-weight: normal;
-  padding-bottom: 10px;
+  font-weight: normal; /* sets how bold the text appears */
+  padding-bottom: 10px; /* space under the h2 */
 }
 
 h3 {
@@ -25,53 +38,62 @@ h3 {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Paragraphs: line-height controls spacing between lines */
 p {
-  line-height: 2;
+  line-height: 2; /* more readable spacing for paragraphs */
 }
 
+/* Horizontal rule (hr) styles:
+   border sets the appearance; width controls how long it is; margin centers it with vertical spacing. */
 hr {
   border: dotted #eaf6f6 6px;
-  border-bottom: none;
-  width: 4%;
-  margin: 100px auto;
+  border-bottom: none; /* remove bottom border to create a specific shape */
+  width: 4%; /* short horizontal rule */
+  margin: 100px auto; /* 100px top and bottom margin, horizontally centered */
 }
 
+/* Links (a) default appearance; :hover changes when the mouse is over the link */
 a {
   color: #11999e;
   font-family: "Montserrat", sans-serif;
   margin: 10px 20px;
-  text-decoration: none;
+  text-decoration: none; /* remove underline */
 }
 
 a:hover {
-  color: #eaf6f6;
+  color: #eaf6f6; /* change color on hover */
 }
 
+/* Containers are used to group parts of the page. Background-color sets the container color.
+   position: relative is often used when absolutely-positioned children are placed relative to this container. */
 .top-container {
   background-color: #e4f9f5;
   position: relative;
-  padding-top: 100px;
+  padding-top: 100px; /* space at the top inside the container */
 }
 
 .middle-container {
-  margin: 100px 0;
+  margin: 100px 0; /* vertical spacing above and below the middle container */
 }
 
 .bottom-container {
   background-color: #66bfbf;
-  padding: 50px 0 20px;
+  padding: 50px 0 20px; /* top 50px, left/right 0, bottom 20px */
 }
 
+/* A row for listing skills: width controls how wide, margin centers and adds vertical space */
 .skill-row {
   width: 50%;
   margin: 100px auto 100px auto;
-  text-align: left;
+  text-align: left; /* align content left inside this column */
 }
 
+/* .pro is a class that underlines text */
 .pro {
   text-decoration: underline;
 }
 
+/* .intro and .contact-message limit the width of text blocks and center them */
 .intro {
   width: 30%;
   margin: auto;
@@ -82,12 +104,15 @@ a:hover {
   margin: 40px auto 60px;
 }
 
-.copyright {
+/* Small copyright text with light color */
+copyright {
   color: #eaf6f6;
   font-size: 0.75rem;
   padding: 20px 0;
 }
 
+/* Absolute positioning for decorative images.
+   right/left/top/bottom set the positioned offsets relative to the nearest positioned ancestor (.top-container has position: relative). */
 .top-cloud {
   position: absolute;
   right: 300px;
@@ -100,8 +125,10 @@ a:hover {
   bottom: 300px;
 }
 
+/* Image sizing and flow:
+   float: left allows text to wrap around the image. Margins add space between the image and text. */
 .code-img {
-  width: 25%;
+  width: 25%; /* width relative to the containing block */
   float: left;
   margin-right: 30px;
 }
@@ -111,6 +138,9 @@ a:hover {
   margin-left: 30px;
 }
 
+/* Button styles:
+   Multiple background-image lines are vendor-prefixed fallbacks for older browsers.
+   border-radius rounds the corners; padding controls space inside the button. */
 .btn {
   background: #11cdd4;
   background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
@@ -122,12 +152,13 @@ a:hover {
   -moz-border-radius: 8;
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  color: #ffffff; /* text color inside the button */
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+  padding: 10px 20px 10px 20px; /* top right bottom left */
+  text-decoration: none; /* remove underline for link-buttons */
 }
 
+/* Hover state for buttons to provide visual feedback */
 .btn:hover {
   background: #30e3cb;
   background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
@@ -138,16 +169,25 @@ a:hover {
   text-decoration: none;
 }
 
+/* CSS Grid layout:
+   display: grid turns the container into a grid.
+   grid-template-columns sets column widths (fractional units).
+   row-gap adds vertical spacing between rows.
+*/
 .parent {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: 0.5fr 1fr; /* two columns: first half the size of the second */
+  grid-template-rows: repeat(1, 1fr); /* one row */
   width: 50%;
   margin: 100px auto 0 auto;
   text-align: left;
-  row-gap: 2rem;
+  row-gap: 2rem; /* space between rows */
 }
 
+/* The following block is commented out. It shows how to place items in specific grid areas.
+   If you remove the opening and closing comment markers (/* and *\/), those rules will apply.
+   Grid-area syntax: grid-area: row-start / column-start / row-end / column-end;
+*/
 /* .typing {
   grid-area: 1 / 1 / 3 / 3;
 }
