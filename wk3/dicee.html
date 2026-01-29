@@ -1,32 +1,710 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dicee</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 Dicee Game - 3 Dice Challenge! 🎲</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       DICEE GAME STYLES - Kid-Friendly Design
+       ============================================ */
 
-  </head>
-  <body>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <div class="container">
-      <h1>Refresh Me</h1>
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: backgroundShift 10s ease infinite;
+    }
 
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="images/dice6.png">
-      </div>
+    @keyframes backgroundShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
 
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="images/dice6.png">
-      </div>
+    /* Main Container */
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 30px;
+      padding: 40px;
+      max-width: 1000px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.5s ease;
+    }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Game Title */
+    .game-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .game-title h2 {
+      font-size: 3rem;
+      color: #667eea;
+      font-weight: 700;
+      text-shadow: 3px 3px 0px #ffd93d;
+      margin-bottom: 10px;
+      animation: bounce 2s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #764ba2;
+      font-weight: 600;
+    }
+
+    /* Game Result Heading */
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff6b6b;
+      margin: 20px 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      animation: pulse 1.5s ease infinite;
+      font-weight: 700;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* Instructions */
+    .instruction {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #2d3436;
+      margin: 20px 0;
+      padding: 15px;
+      background: #e8f5e9;
+      border-radius: 10px;
+      border-left: 5px solid #4caf50;
+      line-height: 1.6;
+    }
+
+    /* Game Board */
+    .game-board {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 40px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Player Sections */
+    .player-section {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .player1-section {
+      background: linear-gradient(135deg, #a8e6ff, #6eb6ff);
+      border: 4px solid #2196f3;
+    }
+
+    .player2-section {
+      background: linear-gradient(135deg, #ffb3ba, #ff6b8a);
+      border: 4px solid #f44336;
+    }
+
+    .player-section:hover {
+      transform: scale(1.05);
+    }
+
+    .player-name {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Dice Container */
+    .dice-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* CSS Dice Styling */
+    .dice {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 15px;
+      display: grid;
+      grid-template-areas:
+        "a . c"
+        "e g f"
+        "d . b";
+      padding: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      animation: diceRoll 0.5s ease;
+    }
+
+    @keyframes diceRoll {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(90deg); }
+      50% { transform: rotate(180deg); }
+      75% { transform: rotate(270deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .dice:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .dot {
+      width: 18px;
+      height: 18px;
+      background: #333;
+      border-radius: 50%;
+      display: none;
+    }
+
+    /* Dice dot positions */
+    .dot:nth-child(1) { grid-area: a; }
+    .dot:nth-child(2) { grid-area: b; }
+    .dot:nth-child(3) { grid-area: c; }
+    .dot:nth-child(4) { grid-area: d; }
+    .dot:nth-child(5) { grid-area: e; }
+    .dot:nth-child(6) { grid-area: f; }
+    .dot:nth-child(7) { grid-area: g; }
+
+    /* Show dots based on dice value */
+    .dice[data-value="1"] .dot:nth-child(7) { display: block; }
+    
+    .dice[data-value="2"] .dot:nth-child(1),
+    .dice[data-value="2"] .dot:nth-child(2) { display: block; }
+    
+    .dice[data-value="3"] .dot:nth-child(1),
+    .dice[data-value="3"] .dot:nth-child(7),
+    .dice[data-value="3"] .dot:nth-child(2) { display: block; }
+    
+    .dice[data-value="4"] .dot:nth-child(1),
+    .dice[data-value="4"] .dot:nth-child(2),
+    .dice[data-value="4"] .dot:nth-child(3),
+    .dice[data-value="4"] .dot:nth-child(4) { display: block; }
+    
+    .dice[data-value="5"] .dot:nth-child(1),
+    .dice[data-value="5"] .dot:nth-child(2),
+    .dice[data-value="5"] .dot:nth-child(3),
+    .dice[data-value="5"] .dot:nth-child(4),
+    .dice[data-value="5"] .dot:nth-child(7) { display: block; }
+    
+    .dice[data-value="6"] .dot:nth-child(1),
+    .dice[data-value="6"] .dot:nth-child(2),
+    .dice[data-value="6"] .dot:nth-child(3),
+    .dice[data-value="6"] .dot:nth-child(4),
+    .dice[data-value="6"] .dot:nth-child(5),
+    .dice[data-value="6"] .dot:nth-child(6) { display: block; }
+
+    /* VS Divider */
+    .vs-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+    }
+
+    .vs-text {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffd93d;
+      text-shadow: 3px 3px 0px #ff6b6b;
+      animation: rotate 3s linear infinite;
+    }
+
+    @keyframes rotate {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    /* Roll Button */
+    .roll-button {
+      display: block;
+      margin: 30px auto;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Fredoka', sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      animation: wiggle 2s ease infinite;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-3deg); }
+      75% { transform: rotate(3deg); }
+    }
+
+    .roll-button:hover {
+      background: linear-gradient(135deg, #ff8787, #ff6b6b);
+      transform: scale(1.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .roll-button:active {
+      transform: scale(0.95);
+    }
+
+    /* Rules Box */
+    .rules-box {
+      background: #fff9c4;
+      border: 3px dashed #fbc02d;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .rules-box h4 {
+      font-size: 1.5rem;
+      color: #f57c00;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .rules-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .rules-box li {
+      font-size: 1.1rem;
+      color: #4e342e;
+      margin: 10px 0;
+      padding-left: 30px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .rules-box li:before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .rules-box strong {
+      color: #d84315;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+      
+      .game-title h2 {
+        font-size: 2rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .dice {
+        width: 70px;
+        height: 70px;
+      }
+
+      .dot {
+        width: 12px;
+        height: 12px;
+      }
+      
+      .player-name {
+        font-size: 1.4rem;
+      }
+      
+      .vs-text {
+        font-size: 2rem;
+      }
+      
+      .roll-button {
+        padding: 15px 35px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Game Title -->
+    <div class="game-title">
+      <h2>🎲 Three Dice Duel 🎲</h2>
+      <p class="subtitle">Roll 3 dice! Highest single die wins! 🔊 Turn on sound!</p>
     </div>
+    
+    <!-- Game Result -->
+    <h1>Click "Roll the Dice" to Start!</h1>
+    
+    <!-- Instructions -->
+    <p class="instruction">Welcome! Each player rolls 3 dice. The player with the highest single die value wins. But watch out - if your highest dice are duplicates, it's a draw! Ready? Let's roll!</p>
+    
+    <!-- Game Board -->
+    <div class="game-board">
+      
+      <!-- Player 1 Section -->
+      <div class="player-section player1-section">
+        <h3 class="player-name">🔵 Player 1</h3>
+        <div class="dice-container player1-dice">
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- VS Divider -->
+      <div class="vs-divider">
+        <span class="vs-text">VS</span>
+      </div>
+      
+      <!-- Player 2 Section -->
+      <div class="player-section player2-section">
+        <h3 class="player-name">🔴 Player 2</h3>
+        <div class="dice-container player2-dice">
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="dice" data-value="6">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Roll Button -->
+    <button class="roll-button">🎲 Roll the Dice! 🎲</button>
+    
+    <!-- Game Rules -->
+    <div class="rules-box">
+      <h4>📋 How to Play:</h4>
+      <ul>
+        <li><strong>Step 1:</strong> Click "Roll the Dice" button</li>
+        <li><strong>Step 2:</strong> Watch as 3 dice roll for each player</li>
+        <li><strong>Step 3:</strong> The player with the highest single die wins!</li>
+        <li><strong>Draw Rule:</strong> If duplicate highest dice appear, it's a draw</li>
+      </ul>
+    </div>
+    
+  </div>
+  
+  <script>
+    // ============================================
+    // DICEE GAME - Enhanced 3-Dice Version
+    // ============================================
+    // This game rolls 3 dice for each player and determines the winner
+    // based on who has the highest single die value
+    // ============================================
 
-    <script src="index.js" charset="utf-8"></script>
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to generate a random dice number between 1 and 6
+    // Uses Math.random() to create random values and Math.floor() to round down
+    function rollDice() {
+      return Math.floor(Math.random() * 6) + 1;
+    }
 
-      </body>
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to update a dice display using CSS
+    // Takes the dice element and the rolled number, then updates the data-value attribute
+    function updateDiceDisplay(diceElement, number) {
+      diceElement.setAttribute("data-value", number);
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to find the highest number among three dice rolls
+    // This determines each player's best roll for comparison
+    function findHighestDice(dice1, dice2, dice3) {
+      return Math.max(dice1, dice2, dice3);
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to check if there are duplicate highest values
+    // Returns true if two or more dice show the same highest number (causing a draw)
+    function hasDuplicateHighest(dice1, dice2, dice3, highestValue) {
+      var count = 0;
+      if (dice1 === highestValue) count++;
+      if (dice2 === highestValue) count++;
+      if (dice3 === highestValue) count++;
+      return count > 1;
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to play dice rolling sound effect
+    // Creates a realistic dice rolling sound using Web Audio API
+    function playDiceRollSound() {
+      var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      var duration = 1.5; // Duration in seconds
+      var numShakes = 15; // Number of shake sounds
+      
+      // 🤖 AI-GENERATED COMMENT:
+      // Create multiple short bursts of noise to simulate dice shaking and rolling
+      for (var i = 0; i < numShakes; i++) {
+        setTimeout(function() {
+          // Create white noise for dice rattling effect
+          var bufferSize = audioContext.sampleRate * 0.05;
+          var buffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
+          var data = buffer.getChannelData(0);
+          
+          for (var j = 0; j < bufferSize; j++) {
+            data[j] = Math.random() * 0.3 - 0.15; // Softer noise
+          }
+          
+          var noise = audioContext.createBufferSource();
+          noise.buffer = buffer;
+          
+          // Add filter for more realistic sound
+          var filter = audioContext.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 800;
+          
+          var gainNode = audioContext.createGain();
+          gainNode.gain.value = 0.15;
+          
+          noise.connect(filter);
+          filter.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          noise.start();
+        }, i * 100); // Stagger the sounds
+      }
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Function to announce the winner using text-to-speech
+    // This provides audio feedback for young players
+    function announceWinner(message) {
+      if ('speechSynthesis' in window) {
+        var utterance = new SpeechSynthesisUtterance(message);
+        utterance.rate = 1.0;
+        utterance.pitch = 1.2;
+        utterance.volume = 1.0;
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Use a friendly voice if available
+        var voices = speechSynthesis.getVoices();
+        if (voices.length > 0) {
+          // Try to find a good English voice
+          var goodVoice = voices.find(function(voice) {
+            return voice.lang.includes('en');
+          });
+          if (goodVoice) {
+            utterance.voice = goodVoice;
+          }
+        }
+        
+        speechSynthesis.speak(utterance);
+      }
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Main game function that runs when the page loads or when player clicks "Roll Again"
+    function playGame() {
+      // Play dice rolling sound effect
+      playDiceRollSound();
+      
+      // Display rolling message for excitement
+      document.querySelector("h1").innerHTML = "🎲 Rolling the dice... 🎲";
+      
+      // 🤖 AI-GENERATED COMMENT:
+      // Small delay to create anticipation before showing results
+      setTimeout(function() {
+        // ============================================
+        // PLAYER 1 - Roll three dice
+        // ============================================
+        var player1Dice1 = rollDice();
+        var player1Dice2 = rollDice();
+        var player1Dice3 = rollDice();
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Update all three dice displays for Player 1
+        var player1Dice = document.querySelectorAll(".player1-dice .dice");
+        updateDiceDisplay(player1Dice[0], player1Dice1);
+        updateDiceDisplay(player1Dice[1], player1Dice2);
+        updateDiceDisplay(player1Dice[2], player1Dice3);
+        
+        // ============================================
+        // PLAYER 2 - Roll three dice
+        // ============================================
+        var player2Dice1 = rollDice();
+        var player2Dice2 = rollDice();
+        var player2Dice3 = rollDice();
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Update all three dice displays for Player 2
+        var player2Dice = document.querySelectorAll(".player2-dice .dice");
+        updateDiceDisplay(player2Dice[0], player2Dice1);
+        updateDiceDisplay(player2Dice[1], player2Dice2);
+        updateDiceDisplay(player2Dice[2], player2Dice3);
+        
+        // ============================================
+        // DETERMINE WINNER
+        // ============================================
+        // 🤖 AI-GENERATED COMMENT:
+        // Find the highest die value for each player
+        var player1Highest = findHighestDice(player1Dice1, player1Dice2, player1Dice3);
+        var player2Highest = findHighestDice(player2Dice1, player2Dice2, player2Dice3);
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Check if either player has duplicate highest values (multiple dice showing the same high number)
+        var player1HasDuplicates = hasDuplicateHighest(player1Dice1, player1Dice2, player1Dice3, player1Highest);
+        var player2HasDuplicates = hasDuplicateHighest(player2Dice1, player2Dice2, player2Dice3, player2Highest);
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Declare winner based on highest single die, but check for draw conditions first
+        var resultMessage = "";
+        var instructionMessage = "";
+        var voiceMessage = ""; // Message for text-to-speech
+        
+        // If Player 1 wins
+        if (player1Highest > player2Highest && !player1HasDuplicates) {
+          resultMessage = "🎉 Player 1 Wins! 🚩";
+          instructionMessage = "Player 1's highest die is " + player1Highest + "!";
+          voiceMessage = "Player 1 won!";
+        }
+        // If Player 2 wins
+        else if (player2Highest > player1Highest && !player2HasDuplicates) {
+          resultMessage = "🎉 Player 2 Wins! 🚩";
+          instructionMessage = "Player 2's highest die is " + player2Highest + "!";
+          voiceMessage = "Player 2 won!";
+        }
+        // If there's a draw due to duplicate highest values on the winning side
+        else if (player1Highest > player2Highest && player1HasDuplicates) {
+          resultMessage = "🤝 It's a Draw!";
+          instructionMessage = "Player 1 has duplicate highest dice (" + player1Highest + ", " + player1Highest + "). No winner!";
+          voiceMessage = "It's a draw!";
+        }
+        else if (player2Highest > player1Highest && player2HasDuplicates) {
+          resultMessage = "🤝 It's a Draw!";
+          instructionMessage = "Player 2 has duplicate highest dice (" + player2Highest + ", " + player2Highest + "). No winner!";
+          voiceMessage = "It's a draw!";
+        }
+        // If both players have the same highest value
+        else if (player1Highest === player2Highest) {
+          resultMessage = "🤝 It's a Draw!";
+          instructionMessage = "Both players rolled " + player1Highest + " as their highest die!";
+          voiceMessage = "It's a draw!";
+        }
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Update the main heading with the game result
+        document.querySelector("h1").innerHTML = resultMessage;
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Update the instruction message to guide players
+        document.querySelector(".instruction").innerHTML = instructionMessage + " Click 'Roll Again' to play another round!";
+        
+        // 🤖 AI-GENERATED COMMENT:
+        // Announce the winner using text-to-speech after a short delay
+        setTimeout(function() {
+          announceWinner(voiceMessage);
+        }, 500);
+        
+      }, 500); // 500ms delay for rolling animation effect
+    }
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Event listener for the "Roll Again" button
+    // When clicked, it triggers a new game round
+    document.querySelector(".roll-button").addEventListener("click", playGame);
+
+    // 🤖 AI-GENERATED COMMENT:
+    // Start the game automatically when the page loads
+    // This creates an immediate, engaging experience for young players
+    playGame();
+  </script>
+</body>
+</html>
 
       <footer>
         www 🎲 App Brewery 🎲 com
