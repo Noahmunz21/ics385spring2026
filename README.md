@@ -10,3 +10,5 @@ This is the main page for Course ICS 385 Spring 2026.
 [hw2bics385.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/week2/hw2/hw2bics385.html)
 
 **Week 3 - JavaScript.**
+
+• HW 3a - [Dicee.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk3/dicee.html)
