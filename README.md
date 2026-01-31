@@ -12,4 +12,5 @@ This is my main page for Course ICS 385 Spring 2026.
 **Week 3 - JavaScript.**
 
 • HW 3a - [Dicee.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk3/dicee.html), [styles.css](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk3/styles.css)
+
 • HW 3b - 
