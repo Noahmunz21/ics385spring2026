@@ -1,6 +1,6 @@
 **ICS 385 Spring 2026**
 
-This is the main page for Course ICS 385 Spring 2026.
+This is my main page for Course ICS 385 Spring 2026.
 
 **Week 1 - Introduction, AI, and Setup.**
 
