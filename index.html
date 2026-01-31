@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///Users/noahmunz/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Drayer Munz - Professional Portfolio.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .project h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .project p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .project .tech-stack {
+            font-size: 0.9rem;
+            color: #764ba2;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noah Drayer Munz</h1>
+        <p>ABIT (Applied Business & Information Technology | Expected Graduation Spring 2027</p>
+        <p>CyberSecuirty & IT Professional</p>
+    </header>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section class="section">
+            <h2>About Me</h2>
+            <div class="bio">
+                <p>I started working in IT a little over a year ago. I have absolutely loved learning the complexities it comes with. I am currently an undergraduate student enrolled in the ABIT Degree Program (Applied Business & Information Technology) in my Junior year, enrolled at the University of Hawai'i, Maui College. Over time, I want to grow and learn enough to become an IT/Cybersecurity Specialist/Professional.</p>
+                
+                <p>Working for the IT Department at the University I attend has provided me with the opportunity to actively apply everything I have learned about Technology over the past year into a real-world working environment. I have been able to learn and diagnose so many technological issues that would have impeded business continuity, and I am just getting started down this path! </p>
+            </div>
+        </section>
+
+        <!-- ICS 385 Projects Section -->
+        <section class="section">
+            <h2>ICS 385 Projects</h2>
+            
+            <div class="project">
+                <h3>CodePen Project</h3>
+                <p><strong>Description:</strong> A personal bio page built by modifying a pre-existing HTML/CSS template, customizing the layout and content to reflect personal information and interests.</p>
+                <p><strong>Key Features:</strong> Hero section with background imagery, profile intro, skills cards, philosophy section, and a contact section with email link.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> HTML, CSS, Google Fonts, Base64 image encoding.</p>
+            </div>
+
+            <div class="project">
+                <h3>Dicee Game Project</h3>
+                <p><strong>Description:</strong> A two-player dice game where each player rolls 3 dice, and the player with the highest single die wins, with a draw condition for duplicate highest values.</p>
+                <p><strong>Key Features:</strong> CSS-rendered dice with dot animations, dice roll sound effects via Web Audio API, text-to-speech winner announcements, and responsive design.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Web Audio API, Speech Synthesis API.</p>
+            </div>
+
+            <div class="project">
+                <h3>GitHub Page Project</h3>
+                <p><strong>Description:</strong> A professional portfolio page designed to showcase coursework and projects from the ICS 385 and ABIT programs, built for GitHub Pages deployment.</p>
+                <p><strong>Key Features:</strong> Gradient header, project showcase cards with descriptions and tech stacks, a skills grid, contact links, and a mobile-responsive layout.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> HTML, CSS, Claude, GitHub Pages.</p>
+            </div>
+        </section>
+
+        <!-- Other ABIT Projects Section -->
+        <section class="section">
+            <h2>Other ABIT Program Projects</h2>
+            
+            <div class="project">
+                <h3>Spirion Deployment on iMaui Network</h3>
+                <p><strong>Description:</strong> Deployed Spirion to end-users on the iMaui network. Spirion is a PII (Personal Identifiable Information)software. Scans local hard and disk/flash drives for PII such as Credit Card Info, Social Security Numbers, Bank Account Numbers, and much more.</p>
+                <p><strong>Key Features:</strong> Used remote software for deployment (NinjaOne), automated, and wrote a deployment script on how to install onto a workstation.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> Spirion, NinjaOne, Ninja Remote, exe file for Windows OS, and pkg file for Mac OS.</p>
+            </div>
+
+            <div class="project">
+                <h3>E-Sports Tournament Project</h3>
+                <p><strong>Description:</strong> Setup and tested E-Sports devices before E-Tourney. Made sure it can handle the necessary GPU & CPU to ensure games can be continuously played and not dropped.</p>
+                <p><strong>Key Features:</strong> Tested throttle, GPU & CPU activity, updated software used for different games they were going to play. Also, created backups of data in case this needed to be imaged onto another PC for re-deployment.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> Imaging, GPU/CPU Software, Amp Tester, and top-of-the-line gaming equipment.</p>
+            </div>
+
+            <div class="project">
+                <h3>UH Maui Website Content Project</h3>
+                <p><strong>Description:</strong> Will work and update content in pages on the UH Maui website. Built the current thub page, which showcases the technological devices we provide to faculty/staff.</p>
+                <p><strong>Key Features:</strong> Build documentations on scripts, deployments, automations, installation processes, software & hardware issues, Duo Authentication, Citrix Smart Card Errors, and more.</p>
+                <p class="tech-stack"><strong>Technologies Used:</strong> OpenProject, WordPress, HTML, CSS.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <ul>
+                        <li>Wireshark</li>
+                        <li>tcpdump</li>
+                        <li>Adobe</li>
+                        <li>Replit</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools &amp; Platforms</h3>
+                    <ul>
+                        <li>SentinelOne</li>
+                        <li>NinjaOne</li>
+                        <li>ActionOne</li>
+                        <li>Spirion</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <ul>
+                        <li>CyberSecurity</li>
+                        <li>Deployment & Configuration</li>
+                        <li>Hardware & Software</li>
+                        <li>Diagnosing Technical Problems</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2>Contact &amp; Links</h2>
+            <div class="contact-links">
+                <a href="mailto:[noahmunz@hawaii.edu]" target="_blank">📧 Email</a>
+                <a href="file:///Users/noahmunz/Downloads/[https://github.com/Noahmunz21/ics385spring2026]" target="_blank">💻 GitHub</a>
+                <a href="file:///Users/noahmunz/Downloads/[https://www.linkedin.com/in/noah-munz-19732616a/]" target="_blank">💼 LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 [Noah Munz]. All rights reserved.</p>
+        <p>Last Updated: [1/31/2026]</p>
+    </footer>
+
+
+</body></html>
