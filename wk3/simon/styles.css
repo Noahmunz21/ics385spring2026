@@ -1,12 +1,24 @@
+/* ============================================================
+   SIMON GAME — STYLESHEET
+   ============================================================ */
+
+/* --- ORIGINAL STYLES (retained from base code) --- */
+
 body {
   text-align: center;
   background-color: #011F3F;
+  /* [AI-GENERATED] Added min-height and font-family to ensure the dark
+     background covers the full viewport and text renders cleanly. */
+  min-height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
+  font-size: 2.2rem;
+  margin: 15px 5% 5%;
   color: #FEF2BF;
 }
 
@@ -14,16 +26,35 @@ body {
   display: block;
   width: 50%;
   margin: auto;
+}
 
+/* [AI-GENERATED] Added display: flex and justify-content to .row so that
+   buttons are properly centered in a horizontal row. The original code
+   had a typo (lass="row") and no .row CSS rule, so layout relied on
+   inline-block behavior by accident. */
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-  margin: 25px;
+  margin: 15px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  height: 180px;
+  width: 180px;
+  border: 8px solid #000;
   border-radius: 20%;
+  /* [AI-GENERATED] Added cursor pointer and transition for better
+     interactive feel when hovering over buttons. */
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* [AI-GENERATED] Hover effect on buttons gives players a subtle visual
+   cue that the buttons are clickable — important for beginner UX. */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
 
 .game-over {
@@ -32,22 +63,254 @@ body {
 }
 
 .red {
-  background-color: red;
+  background-color: #e63946;
 }
 
 .green {
-  background-color: green;
+  background-color: #2a9d4e;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #3a7bd5;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #f4d35e;
+}
+
+/* [AI-GENERATED] .flash class is used by playFullSequence() to animate
+   the sequence playback. It brightens the button with a white overlay
+   and a glow, then the class is removed to return to normal.
+   This replaces the original fadeIn/fadeOut approach which broke button
+   visibility because jQuery's fade methods toggle the display property. */
+.flash {
+  filter: brightness(1.8) drop-shadow(0 0 14px rgba(255, 255, 255, 0.7));
+  transition: filter 0.05s ease;
 }
 
 .pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
+  box-shadow: 0 0 25px white, inset 0 0 15px rgba(255,255,255,0.4);
+  /* [AI-GENERATED] Changed pressed background to a lighter tint of the
+     original color's feel (bright white-grey) so the flash effect is
+     more dramatic and visible during fast sequences at higher levels. */
+  background-color: #e0e0e0 !important;
+  transform: scale(0.95);
+}
+
+
+/* ============================================================
+   WELCOME SCREEN STYLES
+   [AI-GENERATED] Everything below in this section was written to style
+   the new welcome/tutorial screen (Assignment Requirement #5).
+   This screen greets players and teaches them how to play before
+   the game begins, replacing the original "press any key" start.
+   ============================================================ */
+
+#welcome-screen {
+  color: #FEF2BF;
+  padding: 30px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#game-title {
+  font-size: 2.4rem;
+  color: #FEF2BF;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px rgba(254, 242, 191, 0.4);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #a0b4c8;
+  margin-bottom: 30px;
+}
+
+#how-to-play {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+#how-to-play h2 {
+  font-size: 1rem;
+  color: #FEF2BF;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#how-to-play ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+#how-to-play ol li {
+  counter-increment: step-counter;
+  padding: 10px 0 10px 42px;
+  position: relative;
+  font-size: 0.72rem;
+  line-height: 1.7;
+  color: #c8d8e8;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+#how-to-play ol li:last-child {
+  border-bottom: none;
+}
+
+#how-to-play ol li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #3a7bd5;
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Difficulty info box */
+#difficulty-info {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+#difficulty-info h3 {
+  font-size: 0.82rem;
+  color: #FEF2BF;
+  margin-top: 0;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+#difficulty-info p {
+  font-size: 0.68rem;
+  color: #a8bdd0;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.strict-warning {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Start button */
+#start-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #2a9d4e, #3a7bd5);
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 15px rgba(42, 157, 78, 0.35);
+}
+
+#start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(42, 157, 78, 0.5);
+}
+
+#start-btn:active {
+  transform: translateY(0px);
+}
+
+
+/* ============================================================
+   GAME SCREEN STYLES
+   [AI-GENERATED] Styles for elements added to the active game screen:
+   status messages, score display, strict-mode badge, and replay button.
+   ============================================================ */
+
+/* Status message — tells player what phase they're in */
+#status-message {
+  font-size: 0.75rem;
+  color: #a0b4c8;
+  margin: 10px 0 6px;
+  min-height: 1.2em;
+  transition: color 0.3s ease;
+}
+
+#status-message.player-turn {
+  color: #f4d35e;
+}
+
+#status-message.watching {
+  color: #7ec8e3;
+}
+
+#status-message.correct {
+  color: #2a9d4e;
+}
+
+/* Score display */
+#score-display {
+  font-size: 0.65rem;
+  color: #7a9bb5;
+  margin: 8px 0 18px;
+}
+
+#current-score, #high-score {
+  color: #FEF2BF;
+}
+
+/* Strict mode badge */
+#strict-badge {
+  font-size: 0.7rem;
+  color: #fff;
+  background: linear-gradient(135deg, #e63946, #c1121f);
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.5);
+  animation: pulse-badge 1.8s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { box-shadow: 0 0 12px rgba(230,57,70,0.5); }
+  50%      { box-shadow: 0 0 22px rgba(230,57,70,0.8); }
+}
+
+/* Replay button — shown on game over */
+#replay-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.82rem;
+  background: linear-gradient(135deg, #3a7bd5, #2a9d4e);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(58, 123, 213, 0.35);
+}
+
+#replay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 123, 213, 0.5);
+}
+
+#replay-btn:active {
+  transform: translateY(0px);
 }
