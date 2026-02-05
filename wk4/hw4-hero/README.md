@@ -69,12 +69,16 @@ Check each .txt file to see the individual content saved.
 Press Ctrl+C in the terminal to stop the web server.
 
 
-**Troubleshooting**
+**Troubleshooting Problems:** 
+
 Problem: "Cannot find module 'superheroes'"
+
 Solution: Run npm install first
 
-Problem: Port 3000 is already in use
+Problem: "Port 3000 is already in use."
+
 Solution: Stop other applications from using port 3000, or change the port in index.js
 
-Problem: Files not being created
+Problem: "Files not being created."
+
 Solution: Ensure you have write permissions in the directory
