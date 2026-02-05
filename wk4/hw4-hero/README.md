@@ -6,7 +6,7 @@ This project extends the original "hero" application by incorporating 5 NPM pack
 
 **Step 1: Install Dependencies**
 Before running the code, you need to install all the NPM packages:
-bash - npm install
+npm install
 
 This will install all 5 packages listed in package.json:
 superheroes
@@ -18,11 +18,11 @@ famous-last-words
 
 **Step 2: Run the Application**
 
-bashnode index.js
+node index.js
 
 or
 
-bashnpm start
+npm start
 
 **Step 3: What Happens**
 When you run the application, it will:
@@ -72,7 +72,9 @@ Press Ctrl+C in the terminal to stop the web server.
 **Troubleshooting**
 Problem: "Cannot find module 'superheroes'"
 Solution: Run npm install first
+
 Problem: Port 3000 is already in use
 Solution: Stop other applications from using port 3000, or change the port in index.js
+
 Problem: Files not being created
 Solution: Ensure you have write permissions in the directory
