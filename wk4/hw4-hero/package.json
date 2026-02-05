@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "NoahMunz",
-  "license": "",
+  "author": "DebasisB",
+  "license": "ISC",
   "dependencies": {
     "superheroes": "^3.0.0",
     "supervillains": "^3.0.0",
     "inspirational-quotes": "^1.0.8",
-    "popular-movie-quotes": "^1.0.5",
-    "famous-last-words": "^1.0.2"
+    "popular-movie-quotes": "^1.2.4",
+    "famous-last-words": "^0.6.0"
   }
 }
