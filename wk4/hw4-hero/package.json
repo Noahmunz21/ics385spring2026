@@ -1,0 +1,19 @@
+{
+  "name": "hero-hw4",
+  "version": "1.0.0",
+  "description": "HW4 - Extended Node.js application using 5 NPM packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "NoahMunz",
+  "license": "",
+  "dependencies": {
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.0.0",
+    "inspirational-quotes": "^1.0.8",
+    "popular-movie-quotes": "^1.0.5",
+    "famous-last-words": "^1.0.2"
+  }
+}
