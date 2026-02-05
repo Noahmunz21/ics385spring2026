@@ -10,7 +10,8 @@ hero-hw4/
 ├── package-lock.json           # NPM dependency lock file
 ├── README.md                   # This file
 │
-└── Generated Output Files:
+└── 
+Generated Output Files:
     ├── superhero.txt           # Random superhero name
     ├── supervillain.txt        # Random supervillain name
     ├── inspirational-quote.txt # Random inspirational quote
