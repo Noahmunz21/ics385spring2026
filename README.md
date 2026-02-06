@@ -20,4 +20,5 @@ This is my main page for Course ICS 385 Spring 2026.
 
 • HW 4a - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/hw4-hero/index.js)
 
-• HW 4b - [enhanced-qr-generator.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/enhanced-qr-generator.js)
+• HW 4b - [QUICKSTART.md](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/QUICKSTART.md),
+[enhanced-qr-generator.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/enhanced-qr-generator.js), [solution-commented.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/solution-commented.js)
