@@ -1,5 +1,5 @@
 /*
- * Author: [Original Solution Code]
+ * Author: Noah Munz
  * Date: February 6, 2026 (Comments Added)
  * 
  * QR Code Generator - Original Version with Comments
