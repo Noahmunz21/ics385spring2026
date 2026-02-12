@@ -22,3 +22,7 @@ This is my main page for Course ICS 385 Spring 2026.
 
 • HW 4b - [QUICKSTART.md](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/QUICKSTART.md),
 [enhanced-qr-generator.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/enhanced-qr-generator.js), [solution-commented.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk4/qrcode/solution-commented.js)
+
+**Week 5 - ExpressJS**
+
+• HW 5b - [f2cCalc.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/f2cCalc.html), [bmiCalculator.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/bmiCalculator.html), [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/index.js)
