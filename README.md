@@ -30,3 +30,5 @@ This is my main page for Course ICS 385 Spring 2026.
 • HW 5b - [f2cCalc.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/f2cCalc.html), [bmiCalculator.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/bmiCalculator.html), [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/f2c/index.js)
 
 • HW 5c - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/VolCalc/index.js), [VolCalculator.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/VolCalc/VolCalculator.html)
+
+• HW 5d - [Code_Review_JS_Express](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/Code_Review__JS_Express%20-%20Noah%20Munz.pdf), [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/index.js), [solution.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/solution.js), [index_TEST.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/index_TEST.js)
