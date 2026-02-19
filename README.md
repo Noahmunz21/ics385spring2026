@@ -32,3 +32,8 @@ This is my main page for Course ICS 385 Spring 2026.
 • HW 5c - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/VolCalc/index.js), [VolCalculator.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/VolCalc/VolCalculator.html)
 
 • HW 5d - [Code_Review_JS_Express](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/Code_Review__JS_Express%20-%20Noah%20Munz.pdf), [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/index.js), [solution.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/solution.js), [index_TEST.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk5/3.5%20Secrets%20Project/index_TEST.js)
+
+**Week 6 - EJS & Pug**
+
+• HW 6a - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/index.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/package.json), [date.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/date.js)
+
