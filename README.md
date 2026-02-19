@@ -37,3 +37,5 @@ This is my main page for Course ICS 385 Spring 2026.
 
 • HW 6a - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/index.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/package.json), [date.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/date.js)
 
+• HW 6b - 
+
