@@ -37,5 +37,5 @@ This is my main page for Course ICS 385 Spring 2026.
 
 • HW 6a - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/index.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/package.json), [date.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/todolist-v1/date.js)
 
-• HW 6b - 
+• HW 6b - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/index.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/package.json), [solution.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/solution.js), [index.ejs](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/index.ejs), [solution.ejs](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/solution.ejs)
 
