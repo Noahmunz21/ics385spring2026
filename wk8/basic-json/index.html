@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UH Maui College – Course Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>🌺 UH Maui College Course Catalog</h1>
+      <p>Spring 2026 · Interactive Course Browser</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Controls: Search, Filters, Actions -->
+    <section class="controls" aria-label="Search and filter controls">
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search courses, instructors, topics…"
+          aria-label="Search courses"
+          autocomplete="off"
+        >
+        <button id="clearSearchBtn" aria-label="Clear search">Clear</button>
+      </div>
+
+      <div class="filter-section">
+        <select id="departmentFilter" aria-label="Filter by department">
+          <option value="all">All Departments</option>
+          <!-- Populated dynamically from JSON -->
+        </select>
+
+        <select id="creditsFilter" aria-label="Filter by credit hours">
+          <option value="all">All Credits</option>
+          <option value="1">1 Credit</option>
+          <option value="2">2 Credits</option>
+          <option value="3">3 Credits</option>
+          <option value="4">4+ Credits</option>
+        </select>
+      </div>
+
+      <div class="action-section">
+        <button id="loadSampleBtn">🔄 Load Sample Data</button>
+        <button id="addCourseBtn">➕ Add Course</button>
+        <button id="exportBtn">⬇️ Export JSON</button>
+      </div>
+
+    </section>
+
+    <!-- Statistics Strip -->
+    <section id="statisticsSection" class="statistics" aria-label="Catalog statistics">
+      <div class="stat-item">
+        <span class="stat-number" id="totalCourses">0</span>
+        <span class="stat-label">Total Courses</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="totalDepartments">0</span>
+        <span class="stat-label">Departments</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="averageEnrollment">0%</span>
+        <span class="stat-label">Avg Enrollment</span>
+      </div>
+    </section>
+
+    <!-- Results Info Row -->
+    <div class="results-info" aria-live="polite">
+      <span id="searchStats"></span>
+      <span id="displayCount"></span>
+    </div>
+
+    <!-- Course Cards Grid -->
+    <section id="coursesContainer" class="courses-grid" aria-label="Course listings">
+      <div class="loading">Loading course catalog…</div>
+    </section>
+
+  </main>
+
+  <!-- Course Detail / Add-Course Modal -->
+  <div id="courseModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Course details">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close modal">×</button>
+      <div id="modalBody">
+        <!-- Dynamically populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ICS 385 · Week 8 Basic Assignment · JSON Fundamentals · Spring 2026</p>
+  </footer>
+
+  <script src="course-catalog.js"></script>
+</body>
+</html>
