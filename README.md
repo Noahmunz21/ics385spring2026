@@ -2,9 +2,9 @@
 
 This is my main page for Course ICS 385 Spring 2026.
 
-**Week 1 - Introduction, AI, and Setup**
+**Week 1 - Introduction, AI, & Setup**
 
-**Week 2 - HTML and CSS**
+**Week 2 - HTML & CSS**
 
 • HW2: - [bio.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/week2/hw2/bio.html), [styles.css](https://github.com/Noahmunz21/ics385spring2026/blob/main/week2/hw2/styles.css), 
 [hw2bics385.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/week2/hw2/hw2bics385.html)
@@ -40,3 +40,7 @@ This is my main page for Course ICS 385 Spring 2026.
 • HW 6b - [index.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/index.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/package.json), [solution.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/solution.js), [index.ejs](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/index.ejs), [solution.ejs](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/4.4%20Band%20Generator%20Project/solution.ejs)
 
 • HW 6c - [index.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/Hawaii%20Tourism%20LOS%20Calculator%20Code%20UPDATED/index.html), [app.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/Hawaii%20Tourism%20LOS%20Calculator%20Code%20UPDATED/app.js), [data.csv](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/Hawaii%20Tourism%20LOS%20Calculator%20Code%20UPDATED/data.csv), [Code_Review Hawaii Tourism LOS Calculator Code](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk6/Hawaii%20Tourism%20LOS%20Calculator%20Code%20UPDATED/Code_Review%20-%20Hawaii%20Tourism%20LOS%20Calculator%20Code.pdf)
+
+**Week 8 - JSON & APIs**
+
+• HW 8a - [README.md](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk8/basic-json/README.md), [course-catalog.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk8/basic-json/course-catalog.js), [index.html](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk8/basic-json/index.html), [sample-data.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk8/basic-json/sample-data.json), [style.css](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk8/basic-json/styles.css)
