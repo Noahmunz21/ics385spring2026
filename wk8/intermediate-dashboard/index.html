@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UH Maui College – Campus Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" aria-live="polite"></div>
+
+  <!-- ─── Header ──────────────────────────────────────────── -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div class="header-logo">
+        <span class="logo-icon">🌺</span>
+        <div>
+          <div>UH Maui College</div>
+          <div class="header-tagline">Campus Dashboard · Spring 2026</div>
+        </div>
+      </div>
+      <div class="header-controls">
+        <button id="settingsBtn" class="header-btn">⚙ Settings</button>
+        <button id="refreshAllBtn" class="header-btn header-btn--primary">↻ Refresh All</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Main Grid ────────────────────────────────────────── -->
+  <main class="dashboard-main">
+
+    <!-- Quick Stats -->
+    <section class="stats-overview">
+      <div class="stat-card">
+        <span class="stat-number" id="total-courses">—</span>
+        <span class="stat-label">Courses</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="total-students">—</span>
+        <span class="stat-label">Students Enrolled</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="avg-capacity">—</span>
+        <span class="stat-label">Avg Capacity</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="api-status">—</span>
+        <span class="stat-label">API Status</span>
+      </div>
+    </section>
+
+    <!-- Weather Widget -->
+    <section id="weather-widget" class="dashboard-widget">
+      <div class="loading-placeholder">Loading weather…</div>
+    </section>
+
+    <!-- Humor Widget -->
+    <section id="humor-widget" class="dashboard-widget">
+      <div class="loading-placeholder">Loading humor…</div>
+    </section>
+
+    <!-- Course Management Widget -->
+    <section class="dashboard-widget course-widget">
+      <div class="widget-header">
+        <h3>📚 Course Management</h3>
+        <div class="widget-controls">
+          <input type="text" id="courseSearch" placeholder="Search courses…" aria-label="Search courses">
+          <select id="departmentFilter" aria-label="Filter by department">
+            <option value="all">All Departments</option>
+          </select>
+          <button id="addCourseBtn" class="btn-primary" style="padding:.35rem .8rem;font-size:.82rem;">+ Add Course</button>
+        </div>
+      </div>
+      <div id="coursesContainer" class="courses-grid">
+        <p class="empty-state">Loading courses…</p>
+      </div>
+    </section>
+
+    <!-- Quick Actions Widget -->
+    <section class="dashboard-widget actions-widget">
+      <div class="widget-header">
+        <h3>⚡ Quick Actions</h3>
+      </div>
+      <div class="actions-grid">
+        <button class="action-btn" onclick="dashboard.showAddCourseForm()">
+          ➕ Add Course
+        </button>
+        <button class="action-btn" onclick="dashboard.exportData()">
+          📥 Export JSON
+        </button>
+        <button class="action-btn" onclick="dashboard.refreshWeather()">
+          🌤 Update Weather
+        </button>
+        <button class="action-btn" onclick="dashboard.refreshHumor()">
+          😄 New Jokes
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      ICS 385 · Week 8 Intermediate Assignment · Multi-API Dashboard · UH Maui College
+    </footer>
+
+  </main>
+
+  <!-- ─── API Key Setup Modal ──────────────────────────────── -->
+  <div id="apiKeyModal" class="modal" role="dialog" aria-labelledby="apiModalTitle">
+    <div class="modal-content">
+      <h2 id="apiModalTitle">🔑 API Configuration</h2>
+      <p>Enter your API keys below to enable live weather and Chuck Norris facts.
+         Keys are stored only in your browser's localStorage — never sent anywhere else.
+         JokeAPI works without a key.</p>
+
+      <div class="form-note">
+        ⚠ <strong>Security note:</strong> In a production server deployment, these keys would
+        live in a <code>.env</code> file on the server, never in client-side code or version control.
+        See <code>.env.example</code> for the template.
+      </div>
+
+      <div class="form-group">
+        <label for="openWeatherKey">OpenWeatherMap API Key</label>
+        <input type="password" id="openWeatherKey" placeholder="Paste your OpenWeatherMap key…" autocomplete="off">
+        <small style="font-size:.75rem;color:var(--slate-light)">
+          Get a free key at <a href="https://openweathermap.org/api" target="_blank" rel="noopener">openweathermap.org/api</a>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="rapidApiKey">RapidAPI Key (Chuck Norris Jokes)</label>
+        <input type="password" id="rapidApiKey" placeholder="Paste your RapidAPI key…" autocomplete="off">
+        <small style="font-size:.75rem;color:var(--slate-light)">
+          Subscribe free at <a href="https://rapidapi.com/matchilling/api/chuck-norris-jokes-v1" target="_blank" rel="noopener">rapidapi.com</a>
+        </small>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-danger" onclick="dashboard.clearApiKeys()">Clear Keys</button>
+        <button class="btn-secondary" onclick="document.getElementById('apiKeyModal').style.display='none'">Skip</button>
+        <button class="btn-primary" onclick="dashboard.saveApiKeys()">Save & Reload</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Settings / Preferences Modal ───────────────────────── -->
+  <div id="settingsModal" class="modal" role="dialog" aria-labelledby="settingsModalTitle">
+    <div class="modal-content">
+      <h2 id="settingsModalTitle">⚙ Settings & Preferences</h2>
+      <p>Customize dashboard behavior. Changes take effect immediately.</p>
+
+      <div class="form-group">
+        <label for="pref_refreshInterval">Weather Auto-Refresh Interval</label>
+        <select id="pref_refreshInterval">
+          <option value="300000">Every 5 minutes</option>
+          <option value="600000" selected>Every 10 minutes (default)</option>
+          <option value="900000">Every 15 minutes</option>
+          <option value="1800000">Every 30 minutes</option>
+          <option value="0">Manual only</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pref_defaultCity">Default Weather City</label>
+        <input type="text" id="pref_defaultCity" value="Kahului" placeholder="e.g. Kahului">
+      </div>
+
+      <div class="form-group">
+        <label for="pref_theme">Color Theme</label>
+        <select id="pref_theme">
+          <option value="ocean" selected>Ocean (default)</option>
+          <option value="sunset">Sunset</option>
+          <option value="forest">Forest</option>
+        </select>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--border);margin:1rem 0">
+      <p style="font-size:.85rem;font-weight:600;color:var(--slate);">API Keys</p>
+      <p style="font-size:.8rem;color:var(--slate-light);margin-bottom:.75rem;">
+        API keys are stored securely in your browser's localStorage.
+      </p>
+
+      <div class="form-group">
+        <label for="settings_owKey">OpenWeatherMap API Key</label>
+        <input type="password" id="settings_owKey" placeholder="Enter to update…" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="settings_raKey">RapidAPI Key</label>
+        <input type="password" id="settings_raKey" placeholder="Enter to update…" autocomplete="off">
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-danger" onclick="dashboard.clearApiKeys()">Clear API Keys</button>
+        <button class="btn-secondary" onclick="document.getElementById('settingsModal').style.display='none'">Cancel</button>
+        <button class="btn-primary" onclick="dashboard.saveSettings()">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Add/Edit Course Modal ────────────────────────────── -->
+  <div id="courseModal" class="modal" role="dialog" aria-labelledby="courseFormTitle">
+    <div class="modal-content">
+      <h2 id="courseFormTitle">Add New Course</h2>
+      <form id="courseForm" onsubmit="return false;">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="field_id">Course ID *</label>
+            <input type="text" id="field_id" placeholder="e.g. ICS385" required>
+          </div>
+          <div class="form-group">
+            <label for="field_departmentId">Department</label>
+            <select id="field_departmentId">
+              <option value="ICS">ICS</option>
+              <option value="MATH">MATH</option>
+              <option value="ENG">ENG</option>
+              <option value="BUS">BUS</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="field_title">Course Title *</label>
+          <input type="text" id="field_title" placeholder="e.g. Web Development and Administration" required>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="field_credits">Credits</label>
+            <input type="number" id="field_credits" min="1" max="6" value="3">
+          </div>
+          <div class="form-group">
+            <label for="field_instructor">Instructor</label>
+            <input type="text" id="field_instructor" placeholder="e.g. Prof. Aloha">
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="field_enrolled">Enrolled</label>
+            <input type="number" id="field_enrolled" min="0" value="0">
+          </div>
+          <div class="form-group">
+            <label for="field_capacity">Capacity</label>
+            <input type="number" id="field_capacity" min="1" value="25">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="field_schedule">Schedule</label>
+          <input type="text" id="field_schedule" placeholder="e.g. MWF 9:00-9:50am">
+        </div>
+
+        <div class="form-group">
+          <label for="field_room">Room</label>
+          <input type="text" id="field_room" placeholder="e.g. Ka Lama 102">
+        </div>
+
+        <div class="form-group">
+          <label for="field_description">Description</label>
+          <textarea id="field_description" rows="2" placeholder="Brief course description…" style="resize:vertical"></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" onclick="document.getElementById('courseModal').style.display='none'">Cancel</button>
+          <button type="button" class="btn-primary" onclick="dashboard.saveCourse()">Save Course</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ─── Scripts (order matters: config → api-client → catalog → dashboard) -->
+  <script src="config.js"></script>
+  <script src="api-client.js"></script>
+  <script src="course-catalog.js"></script>
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

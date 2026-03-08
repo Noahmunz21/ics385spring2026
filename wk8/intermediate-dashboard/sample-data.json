@@ -1,0 +1,165 @@
+{
+  "institution": {
+    "name": "UH Maui College",
+    "location": "Kahului, Hawaii",
+    "semester": "Spring 2026"
+  },
+  "departments": [
+    {
+      "id": "ICS",
+      "name": "Information & Computer Sciences",
+      "courses": [
+        {
+          "id": "ICS101",
+          "title": "Digital Tools for the Information World",
+          "credits": 3,
+          "instructor": "Dr. Keala Nohea",
+          "enrolled": 28,
+          "capacity": 30,
+          "schedule": "MWF 9:00-9:50am",
+          "room": "Ka Lama 102",
+          "description": "Introduction to computing tools and digital literacy."
+        },
+        {
+          "id": "ICS110",
+          "title": "Introduction to Computer Science I",
+          "credits": 3,
+          "instructor": "Prof. Lani Akana",
+          "enrolled": 25,
+          "capacity": 28,
+          "schedule": "TTh 10:30-11:45am",
+          "room": "Ka Lama 108",
+          "description": "Fundamentals of programming using Python."
+        },
+        {
+          "id": "ICS215",
+          "title": "Introduction to Scripting",
+          "credits": 3,
+          "instructor": "Prof. Kai Haumea",
+          "enrolled": 20,
+          "capacity": 25,
+          "schedule": "MWF 11:00-11:50am",
+          "room": "Ka Lama 110",
+          "description": "Shell scripting, Python automation, and system administration basics."
+        },
+        {
+          "id": "ICS311",
+          "title": "Algorithms",
+          "credits": 3,
+          "instructor": "Dr. Maile Fonoti",
+          "enrolled": 18,
+          "capacity": 22,
+          "schedule": "TTh 1:00-2:15pm",
+          "room": "Ka Lama 205",
+          "description": "Design and analysis of algorithms, data structures."
+        },
+        {
+          "id": "ICS385",
+          "title": "Web Development and Administration",
+          "credits": 3,
+          "instructor": "Prof. Kimo Sato",
+          "enrolled": 22,
+          "capacity": 25,
+          "schedule": "MWF 2:00-2:50pm",
+          "room": "Ka Lama 112",
+          "description": "Full-stack web development, APIs, and server administration."
+        }
+      ]
+    },
+    {
+      "id": "MATH",
+      "name": "Mathematics",
+      "courses": [
+        {
+          "id": "MATH135",
+          "title": "Pre-Calculus",
+          "credits": 3,
+          "instructor": "Dr. Alana Kahananui",
+          "enrolled": 30,
+          "capacity": 35,
+          "schedule": "MWF 8:00-8:50am",
+          "room": "Iliahi 201",
+          "description": "Functions, graphs, and trigonometry review."
+        },
+        {
+          "id": "MATH241",
+          "title": "Calculus I",
+          "credits": 4,
+          "instructor": "Prof. Hoku Tanaka",
+          "enrolled": 26,
+          "capacity": 30,
+          "schedule": "MTWTh 10:00-10:50am",
+          "room": "Iliahi 205",
+          "description": "Limits, derivatives, and integration fundamentals."
+        },
+        {
+          "id": "MATH321",
+          "title": "Discrete Mathematics",
+          "credits": 3,
+          "instructor": "Dr. Puaokala Reyes",
+          "enrolled": 15,
+          "capacity": 20,
+          "schedule": "TTh 8:00-9:15am",
+          "room": "Iliahi 210",
+          "description": "Logic, sets, relations, graph theory, and combinatorics."
+        }
+      ]
+    },
+    {
+      "id": "ENG",
+      "name": "English",
+      "courses": [
+        {
+          "id": "ENG100",
+          "title": "Composition I",
+          "credits": 3,
+          "instructor": "Prof. Lehua Makoa",
+          "enrolled": 22,
+          "capacity": 22,
+          "schedule": "MWF 1:00-1:50pm",
+          "room": "Laulima 301",
+          "description": "Academic writing, research, and critical thinking."
+        },
+        {
+          "id": "ENG209",
+          "title": "Technical Writing",
+          "credits": 3,
+          "instructor": "Prof. Noe Kahale",
+          "enrolled": 18,
+          "capacity": 22,
+          "schedule": "TTh 11:00-12:15pm",
+          "room": "Laulima 308",
+          "description": "Documentation, reports, and professional communication."
+        }
+      ]
+    },
+    {
+      "id": "BUS",
+      "name": "Business",
+      "courses": [
+        {
+          "id": "BUS120",
+          "title": "Introduction to Business",
+          "credits": 3,
+          "instructor": "Dr. Palani Rodrigues",
+          "enrolled": 35,
+          "capacity": 40,
+          "schedule": "MWF 10:00-10:50am",
+          "room": "Paina 101",
+          "description": "Overview of business concepts and entrepreneurship."
+        },
+        {
+          "id": "BUS230",
+          "title": "Project Management",
+          "credits": 3,
+          "instructor": "Prof. Kaui Ferreira",
+          "enrolled": 24,
+          "capacity": 28,
+          "schedule": "TTh 2:30-3:45pm",
+          "room": "Paina 205",
+          "description": "Agile and traditional project management methodologies."
+        }
+      ]
+    }
+  ]
+}
