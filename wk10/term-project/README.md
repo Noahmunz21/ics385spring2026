@@ -28,5 +28,7 @@
 ### AI Tools Used
 - Claude (Anthropic) — assisted with Mongoose schema design and seed data generation
 
-### MongoDB Atlas Screenshot
-![MauiBnB Collection](docs/atlas-screenshot.png)
+### MongoDB Atlas
+ Screenshot
+![MauiBnB Collection](<img width="1129" height="686" alt="MongoDB Collection" src="https://github.com/user-attachments/assets/92ed3b56-9471-4dc8-bfa2-c9f0a49a1454" />)
+![MauiBnB Collection](<img width="1131" height="688" alt="Mongo DB Collection" src="https://github.com/user-attachments/assets/e23af220-fb12-42f9-9a16-009ec74fef58" />)
