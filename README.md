@@ -54,3 +54,6 @@ This is my main page for Course ICS 385 Spring 2026.
 **Week 10 - Term 3 Project Deliverable**
 
 • [.gitignore](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk10/term-project/.gitignore), [Property.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk10/term-project/Property.js), [package.json](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk10/term-project/package.json), [seed.js](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk10/term-project/seed.js), [README.md](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk10/term-project/README.md)
+
+**Week 11 - PyMongo and MongoDB**
+• [pymongo_crud.py](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk11/pymongo_crud.py)
