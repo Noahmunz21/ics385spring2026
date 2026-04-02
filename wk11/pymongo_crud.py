@@ -2,7 +2,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 # Connect to MongoDB Atlas
-uri = os.environ.get("MONGODB_URI")
+uri = uri = "mongodb+srv://noahmunz:<password>@cluster0.sqy4gug.mongodb.net/MauiBnB?retryWrites=true&w=majority"
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client["MauiBnB"]
 
