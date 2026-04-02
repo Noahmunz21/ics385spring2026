@@ -57,4 +57,4 @@ This is my main page for Course ICS 385 Spring 2026.
 
 **Week 11 - PyMongo and MongoDB**
 
-• [.gitignore](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk11/.gitignore),[pymongo_crud.py](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk11/pymongo_crud.py)
+• [.gitignore](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk11/.gitignore), [pymongo_crud.py](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk11/pymongo_crud.py)
