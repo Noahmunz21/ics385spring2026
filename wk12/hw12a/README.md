@@ -20,9 +20,10 @@ This is a React-based marketing page for Hana Hideaway B&B, a fictional locally-
 - Express API (localhost:3000)
 
 ### Setup Instructions
-1. Start Express server: `cd ../wk11/term-project && node server.js`
-2. Run React app: `npm run dev`
-3. Open: `http://localhost:5173`
+1. Make sure MongoDB Atlas is connected (credentials in .env file)
+2. In your terminal, navigate to the backend folder and start the Express server by running node server.js — this powers the API that supplies property data
+3. In a second terminal window, navigate to this folder (hw12a) and run npm run dev to start the React app
+4. Open your browser and go to http://localhost:5173 to view the marketing page
 
 ### AI Tools Used
 - Claude (Anthropic) — assisted with React component structure, CSS styling, and CORS configuration
