@@ -3,7 +3,7 @@
 
 A React-based marketing page for Hana Hideaway B&B, targeting eco-tourists visiting Maui.
 
-### What I Built:
+### What I Built: 
 This is a React-based marketing page for Hana Hideaway B&B, a fictional locally-owned bed and breakfast located in Hana, Maui, Hawaii. The page includes four sections: a Hero section with a Maui beach photo and tagline, an About section describing the property, an Amenities section displaying available features in a responsive grid, and a Call-to-Action section with a booking button. Property data is fetched dynamically from a custom Express.js REST API using React's useState and useEffect hooks. The page is fully responsive and readable on mobile screens as small as 375px wide, and follows WCAG 2.1 AA accessibility guidelines, including descriptive image alt text and sufficient color contrast.
 
 ### Features
