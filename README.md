@@ -62,3 +62,12 @@ This is my main page for Course ICS 385 Spring 2026.
 • [mongoose-crud](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk11/mongoose-crud)
 
 • [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk11/mongoose-crud)
+
+
+**Week 12 - React Part 1**
+
+• HW12a - [hw12a](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/hw12a)
+
+• HW12b - [hw12b](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/hw12b)
+
+• Term Project & README - [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/term-project)
