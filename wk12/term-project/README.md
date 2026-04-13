@@ -12,3 +12,7 @@ What has been completed so far (Weeks 10–11):
 /properties/:id/reviews routes. EJS template rendering all properties. Postman collection tested and exported.
 
 • Week 12: React marketing page built with Hero, About, Amenities, and CallToAction components. Data fetched live from Express API using useEffect and useState.
+
+<img width="1139" height="694" alt="Screenshot 2026-04-09 at 6 11 48 PM" src="https://github.com/user-attachments/assets/75286da0-4488-4a17-9f36-bd501e30ae79" />
+
+<img width="1138" height="694" alt="Screenshot 2026-04-09 at 6 12 04 PM" src="https://github.com/user-attachments/assets/b505648e-fcab-45d1-88e2-8ef14af13e1a" />
