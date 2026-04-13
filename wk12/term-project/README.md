@@ -16,6 +16,8 @@ What has been completed so far (Weeks 10–11):
 ### What I Built: 
 This is a React-based marketing page for Hana Hideaway B&B, a fictional locally-owned bed and breakfast located in Hana, Maui, Hawaii. The page includes four sections: a Hero section with a Maui beach photo and tagline, an About section describing the property, an Amenities section displaying available features in a responsive grid, and a Call-to-Action section with a booking button. Property data is fetched dynamically from a custom Express.js REST API using React's useState and useEffect hooks. The page is fully responsive and readable on mobile screens as small as 375px wide, and follows WCAG 2.1 AA accessibility guidelines, including descriptive image alt text and sufficient color contrast.
 
+Key decisions included using CORS middleware to connect React on port 5173 to Express on port 3000, and choosing CSS Grid for responsive layout. 
+
 <img width="1139" height="694" alt="Screenshot 2026-04-09 at 6 11 48 PM" src="https://github.com/user-attachments/assets/75286da0-4488-4a17-9f36-bd501e30ae79" />
 
 <img width="1138" height="694" alt="Screenshot 2026-04-09 at 6 12 04 PM" src="https://github.com/user-attachments/assets/b505648e-fcab-45d1-88e2-8ef14af13e1a" />
