@@ -64,10 +64,21 @@ This is my main page for Course ICS 385 Spring 2026.
 • [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk11/mongoose-crud)
 
 
-**Week 12 - React Part 1**
+**Week 12 - React Part I**
 
 • HW12a - [hw12a](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/hw12a)
 
 • HW12b - [hw12b](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/hw12b)
 
 • Term Project & README - [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk12/term-project)
+
+
+**Week 13 - React Part II**
+
+• HW13a-island-cards - [hw13a-island-cards](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/hw13a-island-cards)
+
+• HW13b - [hw13b](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/hw13b)
+
+• HW13c - [hw13c](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/hw13c)
+
+• Term-Project, README, Dashboard - [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/term-project)
