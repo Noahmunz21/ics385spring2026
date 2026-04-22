@@ -83,3 +83,7 @@ This is my main page for Course ICS 385 Spring 2026.
 • HW13c - [hw13c](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/hw13c)
 
 • Term-Project, README, Dashboard - [term-project](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk13/term-project)
+
+**Week 14 - Authentication and Security - Part 1**
+
+• HW14b - [hw14b](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk14/hw14b)
