@@ -88,6 +88,6 @@ This is my main page for Course ICS 385 Spring 2026.
 
 • HW14b - [hw14b](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk14/hw14b)
 
-• HW14c (README & Updated PRD) - [PRD v3](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk14/hw14c/PRD_v3.0-Noah_Munz.pdf),[README](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk14/hw14c/README.md)
+• HW14c (README & Updated PRD) - [PRD v3](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk14/hw14c/PRD_v3.0-Noah_Munz.pdf),  [README](https://github.com/Noahmunz21/ics385spring2026/blob/main/wk14/hw14c/README.md)
 
 • HW14d - [hw14d](https://github.com/Noahmunz21/ics385spring2026/tree/main/wk14/hw14d)
