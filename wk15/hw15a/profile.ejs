@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile — Hana Hideaway B&B</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f0f7f3; min-height: 100vh;
+           display: flex; align-items: center; justify-content: center; }
+    .card { background: white; border-radius: 12px; padding: 2.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1); max-width: 450px; width: 100%; }
+    h1 { color: #2c7a4b; font-size: 1.4rem; margin-bottom: 1.5rem; }
+    .info { background: #f0f7f3; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+    .info p { margin-bottom: 0.5rem; font-size: 0.95rem; color: #333; }
+    .info p:last-child { margin-bottom: 0; }
+    .info strong { color: #2c7a4b; }
+    form button { width: 100%; padding: 0.75rem; background: #b91c1c; color: white;
+                  border: none; border-radius: 8px; font-size: 1rem;
+                  font-weight: bold; cursor: pointer; margin-top: 1rem; }
+    form button:hover { background: #991b1b; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🌺 Profile — Hana Hideaway B&B</h1>
+    <div class="info">
+      <p><strong>Name:</strong> <%= user.displayName %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <p><strong>Mongoose ID:</strong> <%= user._id %></p>
+      <p><strong>Provider:</strong> <%= user.provider %></p>
+    </div>
+    <form action="/logout" method="POST">
+      <button type="submit">Sign Out</button>
+    </form>
+  </div>
+</body>
+</html>
