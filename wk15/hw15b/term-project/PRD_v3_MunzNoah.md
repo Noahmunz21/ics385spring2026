@@ -17,7 +17,8 @@
 
 ## Test Scripts (tests/auth.test.js)
 
-\```javascript
+\
+```javascript
 const request = require('supertest');
 const app = require('../server');
 
@@ -40,7 +41,9 @@ test('AC-8: GET /admin/dashboard does not expose admin content when unauthentica
   expect(res.statusCode).toBe(302);
   expect(res.text).not.toContain('Admin Dashboard');
 });
-\```
+
+/
+```
 
 ![Jest Test Output]
 <img width="657" height="367" alt="Screenshot 2026-05-01 at 5 40 05 PM" src="https://github.com/user-attachments/assets/66eb3de2-c43c-4f8b-9441-4da915824bad" />
