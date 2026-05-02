@@ -12,3 +12,7 @@
 - §5 Acceptance Criteria (8 AC in GWT format + 3 Jest tests)
 - §6 Progress Weeks 10–16
 - §7 AI Attribution — Claude (Anthropic)
+
+## Jest Test Results
+
+![Jest Test Output]<img width="657" height="367" alt="Screenshot 2026-05-01 at 5 40 05 PM" src="https://github.com/user-attachments/assets/66eb3de2-c43c-4f8b-9441-4da915824bad" />
