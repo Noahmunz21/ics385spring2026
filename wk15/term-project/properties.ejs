@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maui BnB Properties</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    h1 { color: #2c7a4b; }
+    .property-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .property-card h2 { color: #333; margin-top: 0; }
+    .badge { background: #2c7a4b; color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; }
+    .amenities { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .amenity { background: #e8f5e9; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; }
+    .reviews { margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
+    .review { background: #f9f9f9; padding: 10px; border-radius: 6px; margin-top: 8px; }
+    .stars { color: #f4b400; }
+  </style>
+</head>
+<body>
+  <h1>🌺 Maui BnB Properties</h1>
+  <p>Showing <%= properties.length %> properties</p>
+
+  <% properties.forEach(property => { %>
+    <div class="property-card">
+      <h2><%= property.name %></h2>
+      <span class="badge"><%= property.type %></span>
+      <span class="badge"><%= property.island %></span>
+      <p><%= property.description %></p>
+      <p><strong>Target Segment:</strong> <%= property.targetSegment %></p>
+      <div class="amenities">
+        <% property.amenities.forEach(amenity => { %>
+          <span class="amenity"><%= amenity %></span>
+        <% }); %>
+      </div>
+      <div class="reviews">
+        <strong>Reviews (<%= property.reviews.length %>):</strong>
+        <% if (property.reviews.length === 0) { %>
+          <p>No reviews yet.</p>
+        <% } else { %>
+          <% property.reviews.forEach(review => { %>
+            <div class="review">
+              <strong><%= review.guestName %></strong>
+              <span class="stars">⭐ <%= review.rating %>/5</span>
+              <p><%= review.comment %></p>
+            </div>
+          <% }); %>
+        <% } %>
+      </div>
+    </div>
+  <% }); %>
+</body>
+</html>
