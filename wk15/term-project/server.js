@@ -53,12 +53,17 @@ app.get('/', (req, res) => {
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB Atlas!');
-    if (require.main === module) {
-      app.listen(PORT, () => {
-        console.log(`Server running on http://localhost:${PORT}`);
-      });
-    }
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
   })
-  .catch(err => console.error('Connection error:', err));
+  .catch(err => {
+    console.error('Connection error:', err);
+    // Don't exit — keep process alive for debugging
+  });
+
+process.on('uncaughtException', err => {
+  console.error('Uncaught Exception:', err);
+});
 
 module.exports = app;
