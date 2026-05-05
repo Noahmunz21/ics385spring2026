@@ -77,19 +77,19 @@ and deployment troubleshooting.
 
 ## Screenshots
 ### Admin Login Page
-![Admin Login](<img width="1122" height="769" alt="Screenshot 2026-05-04 at 8 22 31 PM" src="https://github.com/user-attachments/assets/5e1510d8-94d5-43c8-ac77-d0b17e90e9c0" />
-)
+<img width="1122" height="769" alt="Screenshot 2026-05-04 at 8 22 31 PM" src="https://github.com/user-attachments/assets/5e1510d8-94d5-43c8-ac77-d0b17e90e9c0" />
+
 
 ### Admin Dashboard
-![Admin Dashboard](<img width="1124" height="692" alt="Screenshot 2026-05-04 at 8 45 25 PM" src="https://github.com/user-attachments/assets/5dfea473-74ce-4b2d-99cb-203364fd267f" />
-)
+<img width="1124" height="692" alt="Screenshot 2026-05-04 at 8 45 25 PM" src="https://github.com/user-attachments/assets/5dfea473-74ce-4b2d-99cb-203364fd267f" />
+
 
 ### Jest Test Output
-![Jest Tests](<img width="1115" height="770" alt="Screenshot 2026-05-04 at 8 25 37 PM" src="https://github.com/user-attachments/assets/f2a15786-c500-4577-a628-40dbf2052378" />
-)
+<img width="1115" height="770" alt="Screenshot 2026-05-04 at 8 25 37 PM" src="https://github.com/user-attachments/assets/f2a15786-c500-4577-a628-40dbf2052378" />
+
 
 ### MongoDB Atlas Users Collection
-![MongoDB Atlas](<img width="1118" height="690" alt="Screenshot 2026-05-04 at 8 33 57 PM" src="https://github.com/user-attachments/assets/a9566544-34ae-43ac-968f-137ac4af40ab" />
-)
+<img width="1118" height="690" alt="Screenshot 2026-05-04 at 8 33 57 PM" src="https://github.com/user-attachments/assets/a9566544-34ae-43ac-968f-137ac4af40ab" />
+
 
 ICS 385 Spring 2026 | University of Hawaii Maui College | Noah Munz
