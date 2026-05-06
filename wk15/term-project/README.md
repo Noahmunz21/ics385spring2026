@@ -1,6 +1,6 @@
 # 🌺 Hana Hideaway B&B — Hawaii Hospitality Dashboard
 
-**Live URL: https://ics385spring2026-l4ee.onrender.com**
+**Live URL: https://ics385spring2026-l4ee.onrender.com** - only properties & /admin/login page were working at the time of the live code review. Used localhost to show the dashboard, marketing, and the /admin/login database. 
 
 A full-stack Hawaii hospitality web application built for ICS 385 Spring 2026.
 
