@@ -2,8 +2,8 @@
 ## Hana Hideaway B&B | Noah Munz | ICS 385 Spring 2026
 
 ## Live Deployment
-https://ics385spring2026-l4ee.onrender.com - only properties & /admin/login page were working at the time of the live code review. 
-Used localhost to show the dashboard, marketing, and the /admin/login database.
+https://ics385spring2026-l4ee.onrender.com - only `/properties` & `/admin/login` pages were working at the time of the live code review. 
+Used `/localhost` to show the dashboard, marketing, and the `/admin/login` database.
 
 ## Pages
 - **Marketing Page** — `/properties` — React-based page targeting eco-tourists
