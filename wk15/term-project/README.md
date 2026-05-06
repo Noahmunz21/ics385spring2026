@@ -9,6 +9,60 @@ A full-stack Hawaii hospitality web application built for ICS 385 Spring 2026.
 - **Admin Login** — `/admin/login` — Local + Google OAuth authentication
 - **Admin Dashboard** — `/admin/dashboard` — Protected property management panel
 
+## Local Deployment
+
+### Prerequisites
+- Node.js v18+
+- MongoDB Atlas account (or local MongoDB)
+- OpenWeatherMap API key
+- Google OAuth 2.0 credentials (Client ID + Secret)
+
+### Setup Instructions
+
+**Step 1 — Clone the repo**
+```bash
+git clone https://github.com/Noahmunz21/ics385spring2026.git
+cd ics385spring2026
+```
+
+**Step 2 — Set up the backend**
+```bash
+cd wk15/term-project
+npm install
+cp .env.example .env
+# Fill in your credentials in .env
+```
+
+**Step 3 — Seed the admin user**
+```bash
+node seed-admin.js
+# Admin email: admin@hanahideaway.com
+```
+
+**Step 4 — Start the Express server**
+```bash
+node server.js
+# Runs on http://localhost:3000
+```
+
+**Step 5 — Set up the React frontend**
+```bash
+cd ../../wk12/hw12a
+npm install
+npm run dev
+# Runs on http://localhost:5173
+```
+
+### Access the App
+- Marketing Page: `http://localhost:5173`
+- Admin Login: `http://localhost:3000/admin/login`
+- Properties API: `http://localhost:3000/properties`
+
+### Note on Render Deployment
+The Express backend is deployed at `https://ics385spring2026-l4ee.onrender.com`
+however full functionality including the admin dashboard requires local setup
+due to session persistence limitations with MemoryStore on Render's free tier.
+
 ## Setup Instructions
 1. Clone the repo
 2. Run `npm install`
