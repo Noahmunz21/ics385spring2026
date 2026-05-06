@@ -2,30 +2,32 @@
 ## Hana Hideaway B&B | Noah Munz | ICS 385 Spring 2026
 
 ## Live Deployment
-Local MongoDB:
-bashmongod --dbpath ~/data/db
+https://ics385spring2026-l4ee.onrender.com - only properties & /admin/login page were working at the time of the live code review. 
+Used localhost to show the dashboard, marketing, and the /admin/login database.
 
-Express server:
-bashcd ~/Downloads/ics385spring2026/wk15/term-project
-node server.js
+## Pages
+- **Marketing Page** — `/properties` — React-based page targeting eco-tourists
+- **Admin Login** — `/admin/login` — Local + Google OAuth authentication
+- **Admin Dashboard** — `/admin/dashboard` — Protected property management panel
 
-React app:
-bashcd ~/Downloads/ics385spring2026/wk12/hw12a
-npm run dev
-
-http://localhost:5173 — React marketing & dashboard page
-http://localhost:3000/admin/login — admin login
+## Setup Instructions
+1. Clone the repo
+2. Run `npm install`
+3. Copy `.env.example` to `.env` and fill in your credentials
+4. Run `node seed-admin.js` to create admin account
+5. Run `node server.js`
+6. Open `http://localhost:3000`
 
 ## Final Codebase
 The complete Term Project is located in wk15/term-project/
 
 ## Weekly Work Summary
-- **Week 10** — Mongoose Property schema, 5 seeded Maui B&B records in MongoDB Atlas
-- **Week 11** — Express REST API with GET/POST routes, EJS template, Postman tested
-- **Week 12** — React marketing page fetching live API data with useEffect and useState
-- **Week 13** — Chart.js dashboard with DBEDT tourism data and live OpenWeatherMap weather
-- **Week 14** — Passport.js local auth, bcrypt hashing, protected admin dashboard
-- **Week 15** — Google OAuth 2.0, Helmet.js security headers, Render deployment
+- **Week 10** — Mongoose Property schema, 5 seeded records in MongoDB Atlas
+- **Week 11** — Express REST API, EJS template, Postman collection
+- **Week 12** — React marketing page with live API data
+- **Week 13** — Chart.js dashboard, OpenWeatherMap weather widget
+- **Week 14** — Passport.js local auth, bcrypt, admin dashboard
+- **Week 15** — Google OAuth 2.0, Helmet.js, Render deployment
 
 ## PRD
 docs/PRD_v3_MunzNoah.pdf
